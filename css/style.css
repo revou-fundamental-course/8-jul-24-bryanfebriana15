@@ -182,7 +182,7 @@ span {
   box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 20px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input label {
@@ -190,7 +190,8 @@ span {
   font-size: 18px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-family: 'nunito', sans-serif;
 }
 
 .input input {
@@ -208,7 +209,7 @@ span {
   box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .inputW label {
@@ -217,6 +218,7 @@ span {
   font-weight: 600;
   color: #000;
   margin-bottom: 20px;
+  font-family: 'nunito', sans-serif;
 }
 
 .inputW input {
@@ -234,7 +236,8 @@ span {
   box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 .inputH label {
@@ -243,6 +246,7 @@ span {
   font-weight: 600;
   color: #000;
   margin-bottom: 20px;
+  font-family: 'nunito', sans-serif;
 }
 
 .inputH input {
@@ -253,4 +257,187 @@ span {
   text-align: center;
   font-size: 28px;
   font-family: 'nunito', sans-serif;
+}
+
+button.calculate {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+  margin-right: 20px;
+}
+
+button.calculate:hover {
+  background: #0044ff;
+}
+
+button.reset {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: #ea583e;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #ee4527;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+}
+
+button.reset:hover {
+  background: #d62607;
+}
+
+.result {
+  padding: 10px 20px;
+}
+
+.result p {
+  font-weight: 600;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.result #result {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--main-color);
+  background-color: #eaeaea;
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 55px;
+  margin-bottom: 25px;
+}
+
+#comment {
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.comment {
+  display: none;
+  border: dashed 1px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.footer-text {
+  text-decoration: none;
+  color: rgba(40, 40, 40, 0.8);
+  font-family: 'nunito', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  transition: all 0.5;
+}
+
+.footer-text:hover {
+  color: rgba(40, 40, 40, 1);
+}
+
+.gender {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background: #fff;
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+/* Style for Radio */
+.gender .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  /* margin-bottom: 12px; */
+  margin-top: 7px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser default radio button */
+.gender .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.gender .container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.gender .container input:checked~.checkmark {
+  background-color: var(--main-color);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked)  */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.gender .container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.gender .container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.gender .container p {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: 'nunito', sans-serif;
+}
+
+.containerHW {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
