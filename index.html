@@ -54,7 +54,7 @@
             <div class="container">
                 <div class="box">
                     <h1>BMI Calculator</h1>
-                    <div class="content">
+                    <div class="content" id="mycontent">
 
                         <!-- Form Umur -->
                         <div class="input">
@@ -79,7 +79,7 @@
                         <div class ="containerHW">
                             <div class="inputH">
                                 <label for="height">Height(cm)</label>
-                                <input type="number" id="weight" required>
+                                <input type="number" id="height" required>
                             </div>
 
                             <div class="inputW">
@@ -104,6 +104,14 @@
                     <div class="footer"><a class="footer-text" target="blank">Calculator BMI | @bryanfebriana</a></div>
                 </div>
             </div>
+        <!-- Alert Pop up Form -->
+        <div id="myAlert" class="alert">
+            <!--Alert  Pop up Content -->
+            <div class="alert-content">
+                <span class="close">&times;</span>
+                <p id="alertText"></p>
+            </div>
+        </div>
 
 
        </section>
