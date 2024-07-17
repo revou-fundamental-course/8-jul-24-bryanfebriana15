@@ -4,8 +4,9 @@ var height = document.getElementById("height");
 var weight = document.getElementById("weight");
 var male = document.getElementById("m");
 var female = document.getElementById("f");
-var form = document.getElementById("mycontent");
+var form = document.getElementById("myform");
 let resultArea = document.querySelector(".comment");
+
 
 alertContent = document.querySelector(".alert-content");
 alertText = document.querySelector("#alertText");
@@ -18,7 +19,7 @@ function calculate() {
 
   if (age.value == '' || height.value == '' || weight.value == '' || (male.checked == false && female.checked == false)) {
     alert.style.display = "block";
-    alertText.innerHTML = 'All fields are required!';
+    alertText.innerHTML = `All fields are required!`;
 
   } else {
     countBmi();
@@ -52,22 +53,24 @@ function countBmi() {
     result = "Extremely Obese";
   }
 
-
-  // Javascript to Reset Form
-  function resetForm() {
-
-    document.getElementById("mycontent").reset();
-  }
-
-
-
   // Javascript Result
   resultArea.style.display = "block";
   document.querySelector(".comment").innerHTML = `You are <span id="comment"> ${result} </span>`;
   document.querySelector("#result").innerHTML = bmi.toFixed(2);
 
-
 }
+
+// Javascript to Reset Form
+// Simpan nilai-nilai awal yang akan digunakan untuk mereset
+var initialComment = "You are <span id='comment'> ... </span>"; // Ganti ... dengan nilai awalnya jika ada
+var initialBMI = "00.00"; // Ganti dengan nilai awal BMI jika ada
+
+function resetForm() {
+  document.getElementById('myform').reset();
+  document.querySelector(".comment").innerHTML = ``; // Kembalikan teks komentar ke nilai awalnya
+  document.querySelector("#result").innerHTML = `00.00`; // Kembalikan nilai BMI ke nilai awalnya
+}
+
 
 
 // Javascript when user clicks on (x), close the alert
